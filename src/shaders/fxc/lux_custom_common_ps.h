@@ -128,12 +128,14 @@ const float4 cReg_31						 : register(REGISTER_FLOAT_031);
 // Only available with sm3.0
 // The ShaderCompiler will #define this when you compile the Shader as ps30
 #if defined(SHADER_MODEL_PS_3_0)
-	const float4 cReg_32				: register(REGISTER_FLOAT_032);
-	const float4 cReg_33				: register(REGISTER_FLOAT_033);
-	const float4 cReg_34				: register(REGISTER_FLOAT_034);
-	const float4 cReg_35				: register(REGISTER_FLOAT_035);
-	const float4 cReg_36				: register(REGISTER_FLOAT_036);
-	const float4 cReg_37				: register(REGISTER_FLOAT_037);
+	#if !AMBIENTCUBES
+		const float4 cReg_32				: register(REGISTER_FLOAT_032);
+		const float4 cReg_33				: register(REGISTER_FLOAT_033);
+		const float4 cReg_34				: register(REGISTER_FLOAT_034);
+		const float4 cReg_35				: register(REGISTER_FLOAT_035);
+		const float4 cReg_36				: register(REGISTER_FLOAT_036);
+		const float4 cReg_37				: register(REGISTER_FLOAT_037);
+	#endif
 	const float4 cReg_38				: register(REGISTER_FLOAT_038);
 	const float4 cReg_39				: register(REGISTER_FLOAT_039);
 	const float4 cReg_40				: register(REGISTER_FLOAT_040);
